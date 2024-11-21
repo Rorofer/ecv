@@ -1,0 +1,39 @@
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+main h1 {
+    color: rgb(223, 223, 223);
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+main h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+main p {
+    color: lightblue;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+main a{
+    color: rgb(0, 94, 255);
+}
+
+main a:hover{
+    color: rgb(97, 226, 140);
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+article h3 {
+    color: #333;
+    font-size: 1.5rem;
+}

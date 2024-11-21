@@ -1,0 +1,59 @@
+/* Chaque carte */
+.ensemble{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #b6b6b6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 2px solid #000000;
+    text-align: left;
+}
+
+#card_right:hover{
+    transform: rotate(9deg);
+}
+
+#card_left:hover{
+    transform: rotate(-9deg);
+}
+.card h4 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.card h5{
+    color: #202020;
+}
+
+.card h6{
+    color: #303030;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card a {
+    color: #ddff6f;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+body>main>h4{
+    background-color:azure;
+    max-width: 200px;
+    display: inline-flex;
+    padding: 2px 2px;
+    border-radius: 5px;
+}
