@@ -3,6 +3,8 @@
     src: url("./font/harry_potter.ttf");
 }
 
+/* STYLES */
+
 header h1, main h1 {
     font-family: HarryPotter;
 }
@@ -14,17 +16,6 @@ html, body {
 header a {
     display: inline-block;
     text-decoration: none;
-}
-
-
-/* STYLES */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #5c5c5c;
-    height: 100%;
 }
 
 header {

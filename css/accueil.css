@@ -1,3 +1,17 @@
+@font-face{
+    font-family: "BebasNeue";
+    src: url("./font/BebasNeue-Regular.ttf");
+}
+
+main p {
+    font-family: Bebas Neue;
+    color: black;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-family:BebasNeue;
+}
+
 .conteneur {
     max-width: 800px;
     margin: 0 auto;
@@ -5,7 +19,6 @@
     text-align: left;
 }
 
-/* Pour les images dans le conteneur */
 .conteneur img {
     width: 100%; /* Assure que l'image occupe toute la largeur du conteneur */
     max-width: 100%; /* Evite que l'image dépasse */
