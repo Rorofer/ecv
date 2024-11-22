@@ -17,8 +17,11 @@
 <!-- HEADER -->
  
 <header>
+<!-- Bouton pour ouvrir le menu latéral -->
+<button id="menu-toggle" onclick="toggleSousMenu()">☰</button>
+
     <a href="./index.html">
-        <h1>FERMON Romain</h1>
+        <h1 id="titre">FERMON Romain</h1>
     </a>
     <!-- Bouton menu burger -->
     <div class="burger" onclick="toggleMenu()">
@@ -44,9 +47,17 @@
 
 <body>
     <main>
-        <section>
+        <nav>
+            <ul id="sous-menu">
+                <li><a href="#experience-professionnelle">Expérience Professionnelle</a></li>
+                <li><a href="#experience-personnelle">Expérience Personnelle</a></li>
+                <li><a href="#formation-scolaire">Formation Scolaire</a></li>
+            </ul>
+        </nav>
+        <section id="experience-professionnelle">
             <h1>Expérience Professionnelle</h1>
             <section class="ensemble">
+
                 <section class="card" id="card_right">
                     <h4>Stage de fin d'année BUT Info (8 semaines mai et juin 2023)</h4>
                     <h5>Association JrCanDev (Calais)</h5>
@@ -66,6 +77,7 @@
                         <li>Tri des médicaments selon leur date de péremption</li>
                     </ul>
                 </section>
+
                 <section class="card" id="card_left">
                     <h4>Montages vidéo</h4>
                     <h5>Monteur vidéos sur internet</h5>
@@ -81,10 +93,11 @@
             </section>
         </section>
 
-        <section>
+        <section id="experience-personnelle">
             <h1>Expérience Personnelle</h1>
             <h2>Projets Réalisés</h2>
             <section class="ensemble">
+
                 <section class="card" id="card_right">
                     <h4>Créations de scènes pour des streams</h4>
                     <ul>
@@ -92,23 +105,51 @@
                         <li>Utilisation de photoshop</li>
                     </ul>
                 </section>
+
             </section>
         </section>
 
-        <section>
-            <h1>Expérience Personnelle</h1>
-            <h2>Projets Réalisés</h2>
+        <section id="formation-scolaire">
+            <h1>Formation scolaire</h1>
             <section class="ensemble">
+
                 <section class="card" id="card_right">
-                    <h4>Créations de scènes pour des streams</h4>
+                    <h4>Université du Littoral Côte d'Opale, Calais</h4>
                     <ul>
-                        <li>Utilisation d'adobe premiere pro</li>
-                        <li>Utilisation de photoshop</li>
+                        <li>DEUST Webmaster et métiers de l'internet (depuis septembre 2024) </li>
                     </ul>
                 </section>
+
+                <section class="card" id="card_left">
+                    <h4>IUT du Littoral Côte d'Opale, Calais</h4>
+                    <ul>
+                        <li>Bachelor Universitaire de Technologie Informatique (de septembre 2021 à juin 2024)</li>
+                        <li>Validation du DUT Informatique (Bac +2)</li>
+                    </ul>
+                </section>
+
+                <section class="card" id="card_right">
+                    <h4>Lycée Leonard de Vinci, Calais</h4>
+                    <ul>
+                        <li>Première STI2D (de septembre 2019 à juin 2020)</li>
+                        <li>Terminale STI2D (de septembre 2020 à juin 2021)</li>
+                    </ul>
+                </section>
+                
+                <section class="card" id="card_left">
+                    <h4>Lycée Pierre de Coubertin, Calais</h4>
+                    <ul>
+                        <li>2de générale (de septembre 2017 à juin 2018)</li>
+                        <li>Première littéraire (de septembre 2018 à juin 2019)</li>
+                    </ul>
+                </section>
+
             </section>
         </section>
     </main>
+    <!-- Bouton pour revenir en haut -->
+    <button id="scrollToTop" title="Retour en haut">&#8593;</button>
+
 </body>
 
 <!-- FOOTER -->
@@ -128,6 +169,64 @@
         const menu = document.getElementById('menu');
         menu.classList.toggle('show');
     }
-</script>
 
+    // Fonction pour afficher/masquer le menu latéral
+    function toggleSousMenu() {
+        const sousMenu = document.getElementById('sous-menu');
+        sousMenu.classList.toggle('show');
+    }
+
+    // Fonction pour fermer le sous-menu si on clique en dehors
+    function closeMenuIfClickedOutside(event) {
+        const sousMenu = document.getElementById('sous-menu');
+        const menuButton = document.getElementById('menu-toggle'); // Bouton menu burger
+        const burger = document.querySelector('.burger'); // Icône burger
+
+        // Vérifie si le clic est en dehors du sous-menu et du bouton burger
+        const isClickInsideMenu = sousMenu.contains(event.target);
+        const isClickOnBurger = burger.contains(event.target) || menuButton.contains(event.target);
+
+        // Si le clic est en dehors de ces éléments, on ferme le sous-menu
+        if (!isClickInsideMenu && !isClickOnBurger) {
+            sousMenu.classList.remove('show');
+        }
+    }
+
+    // Ajouter un écouteur d'événement pour fermer le sous-menu lorsqu'on clique en dehors
+    document.addEventListener('click', (event) => {
+        closeMenuIfClickedOutside(event);
+    });
+
+    // Ajouter un écouteur d'événement pour fermer le sous-menu lorsqu'un lien est cliqué dans le sous-menu
+    const menuLinks = document.querySelectorAll('#sous-menu a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const sousMenu = document.getElementById('sous-menu');
+            sousMenu.classList.remove('show');
+        });
+    });
+
+
+
+    // Récupérer le bouton
+    const scrollToTopButton = document.getElementById('scrollToTop');
+
+    // Afficher le bouton lorsque l'utilisateur défile vers le bas
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollToTopButton.style.display = "block"; // Affiche le bouton
+        } else {
+            scrollToTopButton.style.display = "none"; // Cache le bouton
+        }
+    };
+
+    // Ajouter un événement au clic pour remonter en haut de la page
+    scrollToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Défilement fluide vers le haut
+        });
+    });
+
+</script>
 </html>
