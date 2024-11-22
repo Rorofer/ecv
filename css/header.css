@@ -3,7 +3,7 @@
     src: url("./font/harry_potter.ttf");
 }
 
-header h1, main h1{
+header h1, main h1 {
     font-family: HarryPotter;
 }
 
@@ -11,10 +11,9 @@ html, body {
     height: 100%;
 }
 
-header a{
+header a {
     text-decoration: none;
 }
-
 
 /* STYLES */
 body {
@@ -31,6 +30,7 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: relative; /* Pour positionner le bouton burger */
 }
 
 header h1 {
@@ -38,6 +38,7 @@ header h1 {
     color: lightgreen;
 }
 
+/* Navigation Styles */
 nav {
     margin-top: 1rem;
 }
@@ -47,6 +48,9 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    transition: max-height 0.3s ease-in-out; /* Animation pour afficher/cacher le menu */
+    overflow: hidden;
+    max-height: 100px; /* Hauteur normale */
 }
 
 nav ul li {
@@ -65,24 +69,50 @@ nav ul li a:hover {
     background-color: #555;
 }
 
+/* Menu Burger */
+.burger {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger div {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        max-height: 0; /* Cache le menu par défaut */
     }
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: space-around;
+    nav ul.show {
+        max-height: 300px; /* Affiche le menu lorsqu'il est activé */
     }
 
     nav ul li {
-        margin: 0.5rem;
+        margin: 0.5rem 0;
     }
 
     nav ul li a {
         font-size: 1rem;
         padding: 0.4rem 0.8rem;
+    }
+
+    /* Bouton burger */
+    .burger {
+        display: flex; /* Afficher le bouton burger */
     }
 }
 

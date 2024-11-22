@@ -20,8 +20,15 @@
     <a href="./index.html">
         <h1>FERMON Romain</h1>
     </a>
+    <!-- Bouton menu burger -->
+    <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- Navigation -->
     <nav>
-        <ul>
+        <ul id="menu">
             <li><a href="à propos.html">À propos</a></li>
             <li><a href="projets.html">Mes projets</a></li>
             <li><a href="photoshop.html">Photoshop</a></li>
@@ -52,4 +59,12 @@
         <a href="https://github.com/Rorofer" target="_blank">Github</a>
     </p>
 </footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('show');
+    }
+</script>
+
 </html>
