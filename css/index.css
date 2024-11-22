@@ -148,10 +148,16 @@
 }
 
 @media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+        padding: 0 10px; /* Ajout de padding horizontal */
+    }
+
     .grid section {
         height: 140px;
         max-height: 160px;
         padding: 3px;
+        width: 100%; /* Les cartes occupent toute la largeur disponible */
     }
 
     .grid h4 {
