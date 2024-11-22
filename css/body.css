@@ -20,17 +20,12 @@ main h1 {
     margin-top: 0;
 }
 
-main h2 {
-    color: #333;
-    margin-bottom: 1rem;
-}
-
 main a{
     color: rgb(0, 94, 255);
 }
 
 main a:hover{
-    color: rgb(97, 226, 140);
+    color: #5BC0EB;
 }
 
 article {
@@ -38,7 +33,7 @@ article {
 }
 
 article h3 {
-    color: #333;
+    color: #829191;
     font-size: 1.5rem;
 }
 
