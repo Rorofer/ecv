@@ -7,7 +7,6 @@
     justify-content: center; /* Centre les cartes isolées */
 }
 
-
 .card {
     width: 100%;
     max-width: 500px;
@@ -21,14 +20,6 @@
     border: 2px solid #000000;
     text-align: left;
     transition: transform 0.1s ease-in-out;
-}
-
-#card_right:hover{
-    transform: rotate(9deg);
-}
-
-#card_left:hover{
-    transform: rotate(-9deg);
 }
 
 section h2{
@@ -119,9 +110,6 @@ body>main>h4{
         max-width: 140px; /* Encore plus petit sur les mobiles */
     }
 }
-
-
-
 
 
 
