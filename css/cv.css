@@ -30,6 +30,14 @@
 #card_left:hover{
     transform: rotate(-9deg);
 }
+
+section h2{
+    color: rgb(147, 147, 147);
+    font-family: HarryPotter;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
 .card h4 {
     color: black;
     margin-bottom: 10px;
