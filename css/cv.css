@@ -1,4 +1,13 @@
 /* Chaque carte */
+
+.ensemble {
+    display: grid; /* Activation de la grille */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colonnes adaptatives */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: center; /* Centre les cartes isolées */
+}
+
+
 .card {
     width: 100%;
     max-width: 500px;
