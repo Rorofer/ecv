@@ -58,3 +58,51 @@ body>main>h4{
     padding: 2px 2px;
     border-radius: 5px;
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .ensemble {
+        grid-template-columns: 1fr 1fr; /* 2 colonnes pour les tablettes */
+    }
+
+    .card {
+        max-width: 90%; /* Les cartes occupent plus de largeur */
+    }
+
+    body > main > h4 {
+        font-size: 1.1rem;
+        max-width: 180px; /* Ajuste la largeur */
+    }
+}
+
+@media (max-width: 768px) {
+    .ensemble {
+        grid-template-columns: 1fr; /* 1 seule colonne pour les petits écrans */
+    }
+
+    .card {
+        max-width: 95%; /* Réduit la largeur pour les petits écrans */
+        margin-bottom: 30px; /* Espace entre les cartes */
+    }
+
+    body > main > h4 {
+        font-size: 1rem;
+        max-width: 160px; /* Réduit la largeur pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .ensemble {
+        grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
+    }
+
+    .card {
+        max-width: 100%;
+        margin-bottom: 20px; /* Réduit l'espace entre les cartes */
+    }
+
+    body > main > h4 {
+        font-size: 0.9rem;
+        max-width: 140px; /* Encore plus petit sur les mobiles */
+    }
+}

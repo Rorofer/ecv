@@ -63,3 +63,70 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    section#contact {
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    input,
+    textarea {
+        font-size: 0.95rem;
+    }
+
+    button {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    section#contact {
+        max-width: 90%;
+        margin: 30px auto;
+        padding: 10px;
+    }
+
+    section#contact h2 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    section#contact {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 8px;
+    }
+
+    section#contact h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input,
+    textarea {
+        font-size: 0.85rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 6px 8px;
+    }
+}

@@ -113,3 +113,48 @@
 .card a:hover {
     text-decoration: underline;
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les tablettes */
+        gap: 15px;
+    }
+
+    .grid section {
+        height: 180px;
+        max-height: 200px;
+    }
+
+    .grid h4 {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+        gap: 10px;
+    }
+
+    .grid section {
+        height: 160px;
+        max-height: 180px;
+    }
+
+    .grid h4 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid section {
+        height: 140px;
+        max-height: 160px;
+        padding: 3px;
+    }
+
+    .grid h4 {
+        font-size: 0.8rem;
+    }
+}

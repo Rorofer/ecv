@@ -4,3 +4,33 @@
     padding: 10px;
     text-align: left;
 }
+
+.conteneur {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .conteneur {
+        max-width: 90%; /* Utilise une largeur relative pour occuper l'espace disponible */
+        padding: 8px; /* Réduction de la marge intérieure */
+    }
+}
+
+@media (max-width: 768px) {
+    .conteneur {
+        max-width: 95%; /* Réduction supplémentaire pour petits écrans */
+        text-align: center; /* Recentre le contenu pour une meilleure lisibilité */
+    }
+}
+
+@media (max-width: 480px) {
+    .conteneur {
+        max-width: 100%; /* Pleine largeur pour les mobiles */
+        padding: 5px; /* Réduction des marges */
+        font-size: 0.9rem; /* Taille de texte légèrement réduite */
+    }
+}

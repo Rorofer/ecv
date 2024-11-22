@@ -61,3 +61,40 @@ main img#vignette:hover {
 .modal .close:hover {
     background-color: rgba(0, 0, 0, 0.9);
 }
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    main img#vignette {
+        width: 90%;
+        border-width: 2px;
+        box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal img {
+        max-width: 90%;
+        max-height: 70%;
+    }
+
+    .modal .close {
+        font-size: 1.5rem;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    main img#vignette {
+        width: 100%;
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal img {
+        max-width: 95%;
+        max-height: 65%;
+    }
+
+    .modal .close {
+        font-size: 1.2rem;
+        padding: 3px 6px;
+    }
+}

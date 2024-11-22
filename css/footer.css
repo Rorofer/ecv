@@ -19,3 +19,33 @@ footer a {
 footer a:hover {
     color: #ff9900;
 }
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    footer {
+        padding: 0.5rem 0.2rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 0.5rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    footer a {
+        font-size: 0.8rem;
+    }
+}
