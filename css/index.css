@@ -1,0 +1,113 @@
+/* Chaque carte */
+.grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.grid section{
+    width: 400px;
+    max-width: 500px;
+    height: 200px;
+    max-height: 250px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #b6b6b6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+.card_apropos {
+    background-image: url('../images/index/moi_version_manga_petit.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.card_projets {
+    background-image: url('../images/index/projets.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.card_photoshop{
+    background-image: url('../images/index/photoshop.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.card_illustrator{
+    background-image: url('../images/index/illustrator.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.card_cv{
+    background-image: url('../images/index/CV.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;}
+    
+.card_contact{
+    background-image: url('../images/index/contact.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.grid h4{
+    max-width: 150px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color:rgba(211, 211, 211, 0.5);
+    background-color:#303030;
+    font-style: italic;
+}
+
+.grid a{
+    text-decoration: none;
+}
+
+#card_right:hover{
+    transform: rotate(9deg);
+}
+
+#card_left:hover{
+    transform: rotate(-9deg);
+}
+.card h4 {
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card h5{
+    color: #202020;
+}
+
+.card h6{
+    color: #303030;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card a {
+    color: #ddff6f;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
