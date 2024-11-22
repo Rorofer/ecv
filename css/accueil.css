@@ -5,11 +5,12 @@
     text-align: left;
 }
 
-.conteneur {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
-    text-align: left;
+/* Pour les images dans le conteneur */
+.conteneur img {
+    width: 100%; /* Assure que l'image occupe toute la largeur du conteneur */
+    max-width: 100%; /* Evite que l'image dépasse */
+    height: auto; /* Garde les proportions de l'image */
+    box-sizing: border-box; /* Inclut les bordures dans les dimensions de l'image */
 }
 
 /* Responsive */
