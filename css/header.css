@@ -12,8 +12,10 @@ html, body {
 }
 
 header a {
+    display: inline-block;
     text-decoration: none;
 }
+
 
 /* STYLES */
 body {
