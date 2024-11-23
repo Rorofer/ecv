@@ -71,9 +71,10 @@
     max-width: 150px;
     margin: 0 auto;
     box-sizing: border-box;
-    color:rgba(211, 211, 211, 0.5);
+    color:rgb(72, 174, 72);
     background-color:#303030;
     font-style: italic;
+    border-radius: 5px;
 }
 
 .grid a{
