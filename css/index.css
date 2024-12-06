@@ -1,8 +1,9 @@
 /* Chaque carte */
 .grid{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3,1fr);
 }
+
 .grid section{
     width: 400px;
     max-width: 500px;

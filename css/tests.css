@@ -1,0 +1,34 @@
+/* TESTS */
+/* Chaque carte */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-areas:
+    "C1 C2 C3"
+    ". C4 ."
+    ; */
+}
+
+/* .grid .apropos{
+    grid-area: C1;
+} */
+
+/* .grid .projets{
+    grid-area: C2;
+} */
+
+/* .grid .photoshop{
+    grid-area: C2;
+} */
+
+/* .grid .illustrator{
+    grid-area: C4;
+} */
+
+/* .grid .cv{
+    grid-area: C3;
+} */
+
+/* .grid .contact{
+    grid-area: C4;
+} */
