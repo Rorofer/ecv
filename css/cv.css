@@ -177,7 +177,7 @@ body>main>h4{
 /* Effet de survol pour les liens */
 #sous-menu a:hover {
     background-color: #444; /* Changer la couleur de fond au survol */
-    color: #ddff6f; /* Change la couleur du texte au survol, si nécessaire */
+    color: #ffffff; /* Change la couleur du texte au survol, si nécessaire */
 }
 
 /* Mobile et tablettes - Ajustement de la largeur du menu */
