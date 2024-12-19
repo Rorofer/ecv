@@ -223,3 +223,35 @@ body>main>h4{
 #scrollToTop:hover {
     background-color: #b3b3b3; /* Couleur au survol */
 }
+
+
+/* Bouton DL CV */
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg, #939393, #4d4d4d);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.download-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn .icon {
+    margin-right: 8px;
+}
