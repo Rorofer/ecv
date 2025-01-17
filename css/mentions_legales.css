@@ -1,0 +1,14 @@
+body main, h1{
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+main a{
+    color: rgb(39, 39, 171);
+}
+
+main{
+    max-width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
