@@ -1,20 +1,16 @@
-/* Variables */
-:root {
-    --background-color: #f9f9f9;
-    --border-color: #ccc;
-    --focus-border-color: #007bff;
-    --focus-box-shadow: rgba(0, 123, 255, 0.5);
-    --button-bg-color: #007bff;
-    --button-bg-hover-color: #0056b3;
-    --text-color-dark: #333;
-    --text-color-light: #555;
-}
+/* Style global */
+/* body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+} */
 
 section#contact {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: var(--background-color);
+    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -22,7 +18,7 @@ section#contact {
 section#contact h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: var(--text-color-dark);
+    color: #333;
 }
 
 form {
@@ -33,7 +29,7 @@ form {
 
 label {
     font-weight: bold;
-    color: var(--text-color-light);
+    color: #555;
 }
 
 input,
@@ -41,21 +37,21 @@ textarea {
     display: flex;
     width: 95%;
     padding: 10px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
 }
 
 input:focus,
 textarea:focus {
-    border-color: var(--focus-border-color);
+    border-color: #007bff;
     outline: none;
-    box-shadow: 0 0 4px var(--focus-box-shadow);
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }
 
 button {
     padding: 10px 15px;
-    background-color: var(--button-bg-color);
+    background-color: #007bff;
     color: #fff;
     font-size: 1rem;
     border: none;
@@ -65,7 +61,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--button-bg-hover-color);
+    background-color: #0056b3;
 }
 
 /* Responsive */
