@@ -1,12 +1,28 @@
-/* Chaque carte */
+/* Variables */
+:root {
+    --background-color-light: #b6b6b6;
+    --background-color-dark: #b5b5b5;
+    --border-color: #000000;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --menu-background-color: rgb(136, 136, 136);
+    --menu-hover-background-color: #444;
+    --button-color: #007bff;
+    --button-hover-color: #0056b3;
+    --text-color-light: #333;
+    --text-color-dark: #202020;
+    --text-color-darker: #303030;
+    --highlight-color: azure;
+    --btn-gradient-start: #939393;
+    --btn-gradient-end: #4d4d4d;
+}
 
+/* Chaque carte */
 .ensemble {
     display: grid; /* Activation de la grille */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colonnes adaptatives */
     gap: 20px; /* Espacement entre les cartes */
     justify-content: center; /* Centre les cartes isolées */
 }
-
 
 .card {
     width: 100%;
@@ -15,10 +31,10 @@
     margin-bottom: 50px;
     padding: 5px;
     box-sizing: border-box;
-    background-color: #b6b6b6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: var(--background-color-light);
+    box-shadow: 0 4px 8px var(--shadow-color);
     border-radius: 10px;
-    border: 2px solid #000000;
+    border: 2px solid var(--border-color);
     text-align: left;
     transition: transform 0.1s ease-in-out;
 }
@@ -31,24 +47,23 @@
     transform: rotate(-9deg);
 }
 
-section h2{
+section h2 {
     color: rgb(147, 147, 147);
-    /* font-family: HarryPotter; */
     font-size: 2rem;
     margin-top: 0;
 }
 
 .card h4 {
-    color: black;
+    color: var(--text-color-dark);
     margin-bottom: 10px;
 }
 
-.card h5{
-    color: #202020;
+.card h5 {
+    color: var(--text-color-light);
 }
 
-.card h6{
-    color: #303030;
+.card h6 {
+    color: var(--text-color-darker);
 }
 
 .card ul {
@@ -63,8 +78,8 @@ section h2{
     text-decoration: underline;
 }
 
-body>main>h4{
-    background-color:azure;
+body > main > h4 {
+    background-color: var(--highlight-color);
     max-width: 200px;
     display: inline-flex;
     padding: 2px 2px;
@@ -119,50 +134,43 @@ body>main>h4{
     }
 }
 
-
-
-
-
-
 /* SOUS MENU */
-
-/* Bouton fixe à gauche pour ouvrir le menu */
 #menu-toggle {
     position: fixed;
-    top: 20px; /* Positionne le bouton un peu en bas du haut de l'écran */
-    left: 10px; /* Positionne le bouton à 10px du bord gauche */
-    background-color: rgb(180, 180, 180,0.5); /* Couleur de fond du bouton */
+    top: 20px;
+    left: 10px;
+    background-color: rgba(180, 180, 180, 0.5);
     color: white;
     padding: 10px;
     border: none;
-    font-size: 1.5rem;  
+    font-size: 1.5rem;
     cursor: pointer;
-    z-index: 1000; /* S'assure que le bouton soit au-dessus de tout le reste */
+    z-index: 1000;
     border-radius: 5px;
 }
 
 /* Menu latéral fixe */
 #sous-menu {
-    background-color: rgb(136, 136, 136);
+    background-color: var(--menu-background-color);
     color: white;
     position: fixed;
     top: 0;
-    left: -250px; /* Le menu commence caché à gauche */
-    width: 250px; /* Largeur du menu */
-    height: auto; /* La hauteur est maintenant automatique pour s'ajuster au contenu */
-    max-height: 100vh; /* Le menu ne dépasse pas la hauteur de l'écran */
+    left: -250px;
+    width: 250px;
+    height: auto;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 20px;
-    transition: transform 0.3s ease; /* Transition pour un effet fluide */
+    transition: transform 0.3s ease;
     border-radius: 15px;
-    z-index: 1000; /* Assure que le menu est au-dessus de tout autre élément */
+    z-index: 1000;
 }
 
 /* Menu ouvert */
 #sous-menu.show {
-    transform: translateX(310px); /* Fait glisser le menu dans la vue */
+    transform: translateX(310px);
 }
 
 /* Lien du menu */
@@ -170,63 +178,58 @@ body>main>h4{
     padding: 2px;
     text-decoration: none;
     color: black;
-    background-color: transparent; /* Assure que le fond par défaut est transparent */
-    transition: background-color 0.3s ease; /* Transition douce pour l'arrière-plan */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 /* Effet de survol pour les liens */
 #sous-menu a:hover {
-    background-color: #444; /* Changer la couleur de fond au survol */
-    color: #ffffff; /* Change la couleur du texte au survol, si nécessaire */
+    background-color: var(--menu-hover-background-color);
+    color: #ffffff;
 }
 
-/* Mobile et tablettes - Ajustement de la largeur du menu */
+/* Mobile et tablettes */
 @media (max-width: 1024px) {
     #sous-menu {
-        width: 200px; /* Réduit la largeur du menu sur les tablettes */
+        width: 200px;
     }
 }
 
-/* Petits écrans (mobiles) - Réduction de la largeur du menu */
 @media (max-width: 768px) {
     #sous-menu {
-        width: 180px; /* Réduit encore plus sur les petits écrans */
+        width: 180px;
     }
 }
 
-/* Très petits écrans (mobiles très petits) - Menu très compact */
 @media (max-width: 480px) {
     #sous-menu {
-        width: 150px; /* Réduit davantage la largeur sur les très petits écrans */
+        width: 150px;
     }
 }
 
 /* BOUTON POUR REMONTER EN HAUT DE PAGE */
-
 #scrollToTop {
     position: fixed;
-    bottom: 10px; /* Position en bas */
-    right: 10px; /* Position à droite */
-    background-color: #b5b5b5;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--background-color-dark);
     color: white;
     border: none;
     border-radius: 50%;
     padding: 15px;
     font-size: 18px;
     cursor: pointer;
-    display: none; /* Le bouton est caché au départ */
+    display: none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s;
     z-index: 1000;
 }
 
 #scrollToTop:hover {
-    background-color: #b3b3b3; /* Couleur au survol */
+    background-color: #b3b3b3;
 }
 
-
 /* Bouton DL CV */
-
 .download-btn {
     display: inline-block;
     padding: 12px 20px;
@@ -234,7 +237,7 @@ body>main>h4{
     font-weight: bold;
     color: #fff;
     text-decoration: none;
-    background: linear-gradient(90deg, #939393, #4d4d4d);
+    background: linear-gradient(90deg, var(--btn-gradient-start), var(--btn-gradient-end));
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -244,7 +247,6 @@ body>main>h4{
 .download-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    color: #fff;
 }
 
 .download-btn:active {

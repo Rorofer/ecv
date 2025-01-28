@@ -1,11 +1,18 @@
 /* STYLES */
 
+:root {
+    --primary-color: rgb(0, 94, 255);
+    --primary-hover-color: #3b7e9a;
+    --text-color: #829191;
+    --background-color: #5c5c5c;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #5c5c5c;
+    background-color: var(--background-color);
     height: 100%;
 }
 
@@ -17,12 +24,12 @@ main {
     text-align: center;
 }
 
-main a{
-    color: rgb(0, 94, 255);
+main a {
+    color: var(--primary-color);
 }
 
-main a:hover{
-    color: #3b7e9a;
+main a:hover {
+    color: var(--primary-hover-color);
 }
 
 article {
@@ -30,7 +37,7 @@ article {
 }
 
 article h3 {
-    color: #829191;
+    color: var(--text-color);
     font-size: 1.5rem;
 }
 

@@ -1,14 +1,23 @@
-body main, h1{
-    font-family: Arial, sans-serif;
+/* Variables */
+:root {
+    --main-max-width: 80%;
+    --main-margin: 5%;
+    --link-color: rgb(39, 39, 171);
+    --font-family: Arial, sans-serif;
+}
+
+/* Styles */
+body main, h1 {
+    font-family: var(--font-family);
     text-align: left;
 }
 
-main a{
-    color: rgb(39, 39, 171);
+main a {
+    color: var(--link-color);
 }
 
-main{
-    max-width: 80%;
-    margin-left: 5%;
-    margin-right: 5%;
+main {
+    max-width: var(--main-max-width);
+    margin-left: var(--main-margin);
+    margin-right: var(--main-margin);
 }

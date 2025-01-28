@@ -1,10 +1,25 @@
-/* Chaque carte */
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+/* Variables */
+:root {
+    --card-background-color: #b6b6b6;
+    --card-border-color: #000000;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --card-border-radius: 10px;
+    --card-transition: transform 0.2s ease-in-out;
+    --card-hover-transform-right: rotate(9deg);
+    --card-hover-transform-left: rotate(-9deg);
+    --card-title-color: rgb(72, 174, 72);
+    --card-title-background: #303030;
+    --card-link-color: #ddff6f;
+    --card-link-hover-decoration: underline;
 }
 
-.grid section{
+/* Grid Styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid section {
     width: 400px;
     max-width: 500px;
     height: 200px;
@@ -13,107 +28,76 @@
     margin-bottom: 50px;
     padding: 5px;
     box-sizing: border-box;
-    background-color: #b6b6b6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    border: 2px solid #000000;
-    transition: transform 0.2s ease-in-out;
+    background-color: var(--card-background-color);
+    box-shadow: var(--card-shadow);
+    border-radius: var(--card-border-radius);
+    border: 2px solid var(--card-border-color);
+    transition: var(--card-transition);
+}
 
+.card_apropos, .card_projets, .card_photoshop, .card_illustrator, .card_cv, .card_contact {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--card-border-radius);
 }
 
 .card_apropos {
     background-image: url('../images/index/chambre_manga.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
 }
 
 .card_projets {
     background-image: url('../images/index/projets.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
 }
 
-.card_photoshop{
+.card_photoshop {
     background-image: url('../images/index/photoshop.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
 }
 
-.card_illustrator{
+.card_illustrator {
     background-image: url('../images/index/illustrator.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
 }
 
-.card_cv{
+.card_cv {
     background-image: url('../images/index/CV.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;}
-    
-.card_contact{
-    background-image: url('../images/index/contact.jfif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
 }
 
-.grid h4{
+.card_contact {
+    background-image: url('../images/index/contact.jfif');
+}
+
+/* Card Title */
+.grid h4 {
     max-width: 150px;
     margin: 0 auto;
     box-sizing: border-box;
-    color:rgb(72, 174, 72);
-    background-color:#303030;
+    color: var(--card-title-color);
+    background-color: var(--card-title-background);
     font-style: italic;
     border-radius: 5px;
 }
 
-.grid a{
+.grid a {
     text-decoration: none;
 }
 
-#card_right:hover{
-    transform: rotate(9deg);
+/* Hover Effects */
+#card_right:hover {
+    transform: var(--card-hover-transform-right);
 }
 
-#card_left:hover{
-    transform: rotate(-9deg);
-}
-.card h4 {
-    color: black;
-    margin-bottom: 10px;
-    text-align: center;
+#card_left:hover {
+    transform: var(--card-hover-transform-left);
 }
 
-.card h5{
-    color: #202020;
-}
-
-.card h6{
-    color: #303030;
-}
-
-.card ul {
-    padding-left: 20px;
-}
-
+/* Card Links */
 .card a {
-    color: #ddff6f;
+    color: var(--card-link-color);
     text-decoration: none;
 }
 
 .card a:hover {
-    text-decoration: underline;
+    text-decoration: var(--card-link-hover-decoration);
 }
 
 /* Responsive */
